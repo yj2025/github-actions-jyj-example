@@ -15,4 +15,4 @@ jobs:
     name: Echo Hello World Job
     steps:
       - uses: actions/checkout@v2
-      - run: echo Hello World! 
+      - run: echo 안녕하세요 
