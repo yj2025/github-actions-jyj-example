@@ -1,0 +1,22 @@
+name: Run hello.py on push
+
+on:
+  push:
+    branches:
+      - dev_4_기본_어플리케이션-2025-06-13
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run hello.py
+        run: python hello.py
